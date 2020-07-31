@@ -17,6 +17,11 @@ amass intel -ip -src -cidr 104.154.0.0/15
 resolvers.txt -w bruteforce.list
 
 amass enum -ip -d [danielmiessler.com](http://danielmiessler.com/)
+
+
+amass enum -active -d owasp.org -public-dns -brute -src -ip -dir amass4owasp -config /root/amass/config.ini -o amass_results_owasp.txt
+
+
 amass enum -src -ip -brute --max-dns-queries 1200 -d DOMAIN
 this command out a fil which is consist of ips and hosts 
 I extract the hosts from this file, to create a file named hosts-amass.txt.
